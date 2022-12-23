@@ -30,11 +30,18 @@ public class Main {
         System.out.println("-------------------------------------------");
 
         System.out.println(author1.equals(author2)); //false
-        System.out.println(book1.equals(book2));  //false
+        System.out.println(author1.equals(author1)); //true
+        System.out.println(author2.equals(author1)); //false
         System.out.println(author1.hashCode());
         System.out.println(author2.hashCode());
+        System.out.println("-------");
 
-        System.out.println("-------------------------------------------");
+        System.out.println(book1.equals(book2));
+        System.out.println(book1.equals(book1));
+        System.out.println(book2.equals(book1));
+        System.out.println(book1.hashCode());
+        System.out.println(book2.hashCode());
+        System.out.println("-------");
 
         author2 = author1;
         System.out.println(author1.equals(author2)); // true
@@ -42,4 +49,5 @@ public class Main {
         System.out.println(author2.hashCode());
 
     }
+
 }

@@ -30,21 +30,19 @@ public class Book {
     public String toString() {
         return "Книга: " + this.bookName + ". " + this.author + ". Год издания: " + this.publishingYear;
     }
-    @Override
-    public boolean equals(Object book) {
-        if (this.getClass() != book.getClass()) {
-            return false;
-        }
-        Book book2 = (Book) book;
 
-        return bookName.equals(book2.bookName) && author.equals(book2.author);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return bookName.equals(book.bookName) && author.equals(book.author);
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(bookName, author);
     }
-
-
 }
 
 
